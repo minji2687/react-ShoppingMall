@@ -9,7 +9,7 @@ export default class Layout extends Component {
           <Link to="/">쇼핑몰</Link>
         </div>
         {this.props.children}
-        <div>저작권은 김승하에게 있습니다.</div>
+        <div>저작권은 조민지에게 있습니다.</div>
       </div>
     );
   }
