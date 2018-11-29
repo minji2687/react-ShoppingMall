@@ -82,7 +82,7 @@ class ProductDetailView extends Component {
         <div>가격: {totalPrice}</div>
         <button
           onClick={() => {
-            const { selectedOption, quantity } = this.state;
+            const { selectedOptionId, quantity } = this.state;
             if (selectedOptionId === '') {
               alert('옵션을 선택하세요');
             } else if (quantity < 1) {
