@@ -16,6 +16,8 @@ class ProductDetailView extends Component {
       //   "price": 30000
       // },
     ],
+
+    onCreateCartItem: () => {},
   };
 
   constructor(props) {
@@ -78,6 +80,23 @@ class ProductDetailView extends Component {
           onChange={e => this.handleQuantityChange(e)}
         />
         <div>가격: {totalPrice}</div>
+        <button
+          onClick={() => {
+            const { selectedOption, quantity } = this.state;
+            if (selectedOptionId === '') {
+              alert('옵션을 선택하세요');
+            } else if (quantity < 1) {
+              alert('한개 이상의 수량을 선택하세요');
+            } else {
+              this.props.onCreateCartItem(
+                this.state.selectedOptionId,
+                this.state.quantity
+              );
+            }
+          }}
+        >
+          장바구니에 담기
+        </button>
         <div>{id}</div>
         <div>{title}</div>
         <div>{description}</div>
