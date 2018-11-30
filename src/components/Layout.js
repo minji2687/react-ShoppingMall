@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
+import Header from '../containers/Header';
 
 export default class Layout extends Component {
   render() {
     return (
       <div>
         <div>
-          <Link to="/">쇼핑몰</Link>
-          <Link to="/login">로그인</Link>
+          <Header />
         </div>
         {this.props.children}
         <div>저작권은 조민지에게 있습니다.</div>
